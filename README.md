@@ -6,5 +6,10 @@ To use:
 1) Plonk the Editor Window script inside an Editor/* folder in your Unity project
 2) Install the node packages (type `npm install` in the terminal of your choice)
 3) Run the node server (type `node index.js` in the terminal of your choice)
+4) Open Editor Window in Unity (Window -> RemotePlayModeControl), fill in port (default 88) & IP (run `ipconfig` on Windows, `ifconfig` on OSX to find yours).
+5) Click Toggle Play Mode to toggle play mode on all connected editors (that have the window open).
+
+If you close the window, that editor will stop listening to the server.
+If you enter Play Mode via the normal button and the server is set to 'Stop', the editor will stop playing after a second (in case this catches anyone out).
 
 Hope you might find this useful!
