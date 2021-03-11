@@ -1,0 +1,41 @@
+<html>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+
+            var butStart = document.getElementById("Start");
+            butStart.addEventListener("click", function(){
+                var rq = new Request("./start");
+                fetch(rq).then(()=>{
+                    console.log("Started playmode");
+                    setStatus();
+                });
+            });
+
+            var butStop = document.getElementById("Stop");
+            butStop.addEventListener("click", function(){
+                var rq = new Request('./stop');
+                fetch(rq).then(()=>{
+                    console.log("Stopped playmode")
+                    setStatus();
+                });
+            });
+
+            function setStatus(){
+
+                var statusRQ = new Request('./stateJSON');
+                fetch(statusRQ).then( response=>  response.json()).then(data => {
+                    console.log(data);
+                    document.getElementById("status").innerHTML = data.playMode;
+                });
+
+                
+            }
+
+        });
+    </script>
+    <body>
+        <button id="Start">Start</button>
+        <button id="Stop">Stop</button>
+        <h3 id="status"> - </h3>
+    </body>
+</html>

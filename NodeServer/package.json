@@ -1,0 +1,14 @@
+{
+  "name": "unityplaymodecontroller",
+  "version": "1.0.0",
+  "description": "Play Mode Controller for Unity + NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Owen Hindley",
+  "license": "0BSD",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
