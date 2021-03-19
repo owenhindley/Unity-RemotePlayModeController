@@ -89,6 +89,7 @@ public class RemotePlayModeControlEditorWindow : EditorWindow
                 if (t == "1" && !EditorApplication.isPlaying)
                 {
                     // Debug.Log("Remotely playing editor");
+                    AssetDatabase.Refresh();
                     EditorApplication.isPlaying = true;
                 }
                 else if ( t == "0" && EditorApplication.isPlaying)
